@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Condensed:400,700&display=swap');
+
+
+@mixin md-size {
+    @media(max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin lg-size {
+    @media(max-width: 1200px) {
+        @content;
+    }
+}
+
+
+body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    font-family: 'Roboto Condensed', sans-serif;
+    min-height: 100vh;
+
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    display: flex;
+
+    .github {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.animations {
+    .border-radius {
+        border-radius: 10px;
+    }
+
+    .center-animation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .r-height {
+        height: 400px;
+    }
+
+    .r1-1 {
+        background-image: linear-gradient(160deg, #f6d365 0%, #fda085 100%);
+
+        .my-container {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(60deg);
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border: 3px solid black;
+                border-radius: 50%;
+                animation: circle-move 1.5s ease-in-out infinite alternate;
+                animation-play-state: paused;
+
+                &:nth-child(2) {
+                    top: 15px;
+                    left: 15px;
+                    bottom: 15px;
+                    right: 15px;
+                    animation-delay: 0.3s;
+                }
+
+                &:nth-child(3) {
+                    top: 30px;
+                    left: 30px;
+                    bottom: 30px;
+                    right: 30px;
+                    animation-delay: 0.6s;
+                }
+
+                &:nth-child(4) {
+                    top: 45px;
+                    left: 45px;
+                    bottom: 45px;
+                    right: 45px;
+                    animation-delay: 0.9s;
+                }
+
+                &:nth-child(5) {
+                    top: 60px;
+                    left: 60px;
+                    bottom: 60px;
+                    right: 60px;
+                    animation-delay: 1.2s;
+                }
+
+                &:nth-child(5) {
+                    top: 75px;
+                    left: 75px;
+                    bottom: 75px;
+                    right: 75px;
+                    animation-delay: 1.4s;
+                }
+
+            }
+        }
+    }
+
+    .r1-2 {
+        background-image: linear-gradient(-30deg, #f093fb 0%, #f5576c 100%);
+
+        .my-container {
+            height: 250px;
+            width: 200px;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateY(-45deg);
+
+            .card-container {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                transform-style: preserve-3d;
+                animation: cards-rotation 5s linear infinite;
+                animation-play-state: paused;
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    background-image: radial-gradient(#b4b4b4 0%, #ebebeb 100%);
+
+                    &:nth-child(2) {
+                        transform: rotateX(45deg);
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotateX(90deg);
+                    }
+
+                    &:nth-child(4) {
+                        transform: rotateX(135deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .r2-1 {
+        background-image: radial-gradient(#48c6ef 0%, #6f86d6 100%);
+
+        .my-container {
+            position: relative;
+            height: 200px;
+            width: 500px;
+            transform-style: preserve-3d;
+            transform: perspective(600px) rotateX(55deg);
+            background-color: midnightblue;
+
+            @include lg-size {
+                width: 440px;
+            }
+
+            @include md-size() {
+                width: 300px;
+                transform: perspective(600px) rotateX(65deg);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 8px;
+                transform: translateY(-50%);
+                background: linear-gradient(to right, #fff 70%, midnightblue 70%);
+                background-size: 100px;
+                background-repeat: repeat-x;
+                animation: endless-road 3s linear infinite;
+                animation-play-state: paused;
+
+                @include lg-size {
+                    background-size: 110px;
+                }
+
+                @include md-size {
+                    background-size: 50px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                width: 100%;
+                height: 15px;
+                background-color: rgb(53, 53, 53);
+                transform-origin: top;
+                transform: perspective(750px) rotateX(-55deg);
+            }
+
+            .road-shadow {
+                position: absolute;
+                bottom: -81px;
+                left: 50%;
+                height: 60px;
+                width: 95%;
+                transform: translateX(-50%);
+                background: linear-gradient(#000, transparent);
+                opacity: 0.6;
+
+                @include md-size {
+                    bottom: -88px;
+                    width: 93.6%;
+                }
+            }
+        }
+    }
+
+    .r2-2 {
+        background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+    }
+}
+
+@keyframes circle-move {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes cards-rotation {
+    0% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+
+    100% {
+        transform: perspective(1000px) rotateX(359deg)
+    }
+}
+
+@keyframes endless-road {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}

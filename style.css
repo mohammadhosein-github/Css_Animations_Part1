@@ -1,1 +1,338 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Condensed:400,700&display=swap");
+body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-family: 'Roboto Condensed', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title .github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title .github a {
+  font-size: 1.5rem;
+}
+
+.animations .border-radius {
+  border-radius: 10px;
+}
+
+.animations .center-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animations .r-height {
+  height: 400px;
+}
+
+.animations .r1-1 {
+  background-image: linear-gradient(160deg, #f6d365 0%, #fda085 100%);
+}
+
+.animations .r1-1 .my-container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px) rotateX(60deg);
+          transform: perspective(1000px) rotateX(60deg);
+}
+
+.animations .r1-1 .my-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid black;
+  border-radius: 50%;
+  -webkit-animation: circle-move 1.5s ease-in-out infinite alternate;
+          animation: circle-move 1.5s ease-in-out infinite alternate;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.animations .r1-1 .my-container span:nth-child(2) {
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.animations .r1-1 .my-container span:nth-child(3) {
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.animations .r1-1 .my-container span:nth-child(4) {
+  top: 45px;
+  left: 45px;
+  bottom: 45px;
+  right: 45px;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.animations .r1-1 .my-container span:nth-child(5) {
+  top: 60px;
+  left: 60px;
+  bottom: 60px;
+  right: 60px;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.animations .r1-1 .my-container span:nth-child(5) {
+  top: 75px;
+  left: 75px;
+  bottom: 75px;
+  right: 75px;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.animations .r1-2 {
+  background-image: linear-gradient(-30deg, #f093fb 0%, #f5576c 100%);
+}
+
+.animations .r1-2 .my-container {
+  height: 250px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px) rotateY(-45deg);
+          transform: perspective(800px) rotateY(-45deg);
+}
+
+.animations .r1-2 .my-container .card-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: cards-rotation 5s linear infinite;
+          animation: cards-rotation 5s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.animations .r1-2 .my-container .card-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-image: radial-gradient(#b4b4b4 0%, #ebebeb 100%);
+}
+
+.animations .r1-2 .my-container .card-container span:nth-child(2) {
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+}
+
+.animations .r1-2 .my-container .card-container span:nth-child(3) {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.animations .r1-2 .my-container .card-container span:nth-child(4) {
+  -webkit-transform: rotateX(135deg);
+          transform: rotateX(135deg);
+}
+
+.animations .r2-1 {
+  background-image: radial-gradient(#48c6ef 0%, #6f86d6 100%);
+}
+
+.animations .r2-1 .my-container {
+  position: relative;
+  height: 200px;
+  width: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateX(55deg);
+          transform: perspective(600px) rotateX(55deg);
+  background-color: midnightblue;
+}
+
+@media (max-width: 1200px) {
+  .animations .r2-1 .my-container {
+    width: 440px;
+  }
+}
+
+@media (max-width: 991px) {
+  .animations .r2-1 .my-container {
+    width: 300px;
+    -webkit-transform: perspective(600px) rotateX(65deg);
+            transform: perspective(600px) rotateX(65deg);
+  }
+}
+
+.animations .r2-1 .my-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #fff), color-stop(70%, midnightblue));
+  background: linear-gradient(to right, #fff 70%, midnightblue 70%);
+  background-size: 100px;
+  background-repeat: repeat-x;
+  -webkit-animation: endless-road 3s linear infinite;
+          animation: endless-road 3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@media (max-width: 1200px) {
+  .animations .r2-1 .my-container::after {
+    background-size: 110px;
+  }
+}
+
+@media (max-width: 991px) {
+  .animations .r2-1 .my-container::after {
+    background-size: 50px;
+  }
+}
+
+.animations .r2-1 .my-container::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  height: 15px;
+  background-color: #353535;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: perspective(750px) rotateX(-55deg);
+          transform: perspective(750px) rotateX(-55deg);
+}
+
+.animations .r2-1 .my-container .road-shadow {
+  position: absolute;
+  bottom: -81px;
+  left: 50%;
+  height: 60px;
+  width: 95%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background: linear-gradient(#000, transparent);
+  opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+  .animations .r2-1 .my-container .road-shadow {
+    bottom: -88px;
+    width: 93.6%;
+  }
+}
+
+.animations .r2-2 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cd9cf2), to(#f6f3ff));
+  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+@-webkit-keyframes circle-move {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes circle-move {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes cards-rotation {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+            transform: perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(359deg);
+            transform: perspective(1000px) rotateX(359deg);
+  }
+}
+
+@keyframes cards-rotation {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+            transform: perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(359deg);
+            transform: perspective(1000px) rotateX(359deg);
+  }
+}
+
+@-webkit-keyframes endless-road {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes endless-road {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
