@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Condensed:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto+Condensed:300,400,700&display=swap');
 
 
 @mixin lg-size {
@@ -21,9 +21,13 @@
 
 
 body {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    position: relative;
+    background-image: linear-gradient(60deg, #434343 0%, black 100%);
+    background-blend-mode: multiply, multiply;
     font-family: 'Roboto Condensed', sans-serif;
     min-height: 100vh;
+    color: #fff;
+    overflow: hidden;
 
 }
 
@@ -37,15 +41,90 @@ ul {
     padding: 0;
 }
 
+.preloading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    z-index: 100;
+    transition: 0.8s ease-out;
+
+    .loading-container {
+        position: relative;
+
+        span,
+        i {
+            font-size: 5rem;
+        }
+
+        span {
+            margin-right: 5px;
+            animation: preloading 2s linear infinite;
+
+            &:nth-child(7) {
+                margin-right: 15px;
+            }
+        }
+
+        i {
+            animation: preloadingTwo 2s linear infinite,
+                preloading 2s linear infinite;
+        }
+    }
+
+    &.hidden-preloading {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 .title {
     display: flex;
+
+    h1 {
+        font-size: 2.3rem;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+
+        @include sm-size() {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+    }
 
     .github {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
+        @include sm-size() {
+            align-items: flex-start;
+        }
+
         a {
+            font-size: 1.5rem;
+
+            &:hover {
+                color: skyblue;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.description {
+    h3 {
+        text-transform: capitalize;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.9);
+
+        @include sm-size {
             font-size: 1.5rem;
         }
     }
@@ -284,6 +363,7 @@ ul {
 
     .r2-2 {
         background-image: radial-gradient(#434343 0%, black 100%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         overflow: hidden;
 
         .my-container {
@@ -606,6 +686,7 @@ ul {
     .r5-1 {
         background-color: #353839;
         overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
 
         @include sm-size {
             height: 230px;
@@ -770,6 +851,7 @@ ul {
     .r6-2 {
         background-image: linear-gradient(135deg, #434343 0%, black 100%);
         overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
 
         ul {
             li {
@@ -834,6 +916,33 @@ ul {
         }
     }
 
+}
+
+@keyframes preloading {
+    0% {
+        filter: blur(0);
+    }
+
+    49%,
+    51% {
+        filter: blur(6px);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+
+@keyframes preloadingTwo {
+
+    0%,
+    100% {
+        color: #fff;
+    }
+
+    50% {
+        color: greenyellow;
+    }
 }
 
 @keyframes circle-move {
