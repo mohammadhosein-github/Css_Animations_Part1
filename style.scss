@@ -60,6 +60,10 @@ ul {
         span,
         i {
             font-size: 5rem;
+
+            @include sm-size {
+                font-size: 3.2rem;
+            }
         }
 
         span {

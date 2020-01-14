@@ -49,6 +49,13 @@ ul {
   font-size: 5rem;
 }
 
+@media (max-width: 767px) {
+  .preloading .loading-container span,
+  .preloading .loading-container i {
+    font-size: 3.2rem;
+  }
+}
+
 .preloading .loading-container span {
   margin-right: 5px;
   -webkit-animation: preloading 2s linear infinite;
